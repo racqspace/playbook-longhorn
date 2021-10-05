@@ -84,6 +84,8 @@ jobs:
           cat /etc/rancher/k3s/k3s.yaml
           mkdir -p ~/.kube
           cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
+          sudo mkdir -p /root/.kube
+          sudo cp /etc/rancher/k3s/k3s.yaml /root/.kube/config
 
       - name: Run Playbook
         run: >-
