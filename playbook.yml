@@ -1,0 +1,9 @@
+---
+- name: Install Longhorn
+  hosts: all
+  become: true
+  tags:
+    - longhorn
+  roles:
+    - role: racqspace.longhorn
+...
