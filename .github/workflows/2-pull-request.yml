@@ -68,7 +68,7 @@ jobs:
           python-version: 3.x
 
       - name: Install python Dependencies
-        run: pip3 install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Install ansible Dependencies
         run: ansible-galaxy role install -r roles/requirements.yml
@@ -83,7 +83,6 @@ jobs:
       - name: Run Playbook
         run: >-
           ansible-playbook -i hosts playbook.yml
-          -e "ansible_python_interpreter=${pythonLocation}"
         env:
           PY_COLORS: 1
           ANSIBLE_FORCE_COLOR: 1
