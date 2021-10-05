@@ -1,6 +1,3 @@
 ansible
 ansible-lint
-kubernetes
-openshift
 pre-commit
-pyyaml
