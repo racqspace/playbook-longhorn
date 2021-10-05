@@ -72,7 +72,7 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Install Molecule Dependencies
+      - name: Install python Dependencies
         run: pip3 install -r requirements.txt
 
       - name: Install ansible Dependencies
@@ -86,7 +86,9 @@ jobs:
           cp /etc/rancher/k3s/k3s.yaml ~/.kube/config
 
       - name: Run Playbook
-        run: ansible-playbook -i hosts playbook.yml
+        run: >-
+          ansible-playbook -i hosts playbook.yml
+          -e "ansible_python_interpreter=/usr/bin/python3"'
         env:
           PY_COLORS: 1
           ANSIBLE_FORCE_COLOR: 1
