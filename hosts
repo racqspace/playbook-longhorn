@@ -1,1 +1,5 @@
+[longhorn_executor]
+localhost ansible_connection=local
+
+[longhorn_nodes]
 localhost ansible_connection=local
