@@ -4,7 +4,6 @@
     - longhorn_executor
     - longhorn_nodes
   become: true
-  gather_facts: false
   tags:
     - longhorn
   roles:
