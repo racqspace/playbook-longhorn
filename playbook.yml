@@ -1,6 +1,8 @@
 ---
 - name: Install Longhorn
-  hosts: all
+  hosts:
+    - longhorn_executor
+    - longhorn_nodes
   become: true
   tags:
     - longhorn
